@@ -1,0 +1,56 @@
+<html>
+   <head>
+      <title> Statment Page </title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   </head>
+   <style type="text/css">
+      .form-inline{
+      margin:0 auto;
+      width:500px;
+      }
+   </style>
+   <body>
+      <div id = form1 align="center" >
+         <table width="300" border="1" align="center" cellpadding="1" cellspacing="1" bgcolor="#CCCCCC">
+            <tr>
+               <form class="form-inline" name="year" action="Year.jsp" method="post" onsubmit="return yearTest()">
+               <td>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                     <tr>
+                        <td colspan="3"> <strong>Statment</strong> </td>
+                     </tr>
+                     <tr>
+                        <td width="30"> <label for="year" class="mr-sm-2">Year</label> </td>
+                        <td width="4">:</td>
+                        <td width="1500"> <input type="number" name="year" id="year" placeholder="Enter year" class="form-control mb-2 mr-sm-2"> </td>
+                        <td width="450"> <button type="submit" onclick="yearTest()" class="btn btn-warning" >Submit</button>  </td>
+                     </tr>
+                     </form>
+                     <form class="form-inline" action="Month.jsp?page=1" method="post" onsubmit="return monthTest()">
+                        <tr>
+                           <td> <label for="year" class="mr-sm-2"> Month </label> </td>
+                           <td width="4">:</td>
+                           <td> <input input type="number" name="month" id="month" placeholder="Enter Month" class="form-control mb-2 mr-sm-2"> </td>
+                           <td> <button type="submit" onclick="monthTest()" class="btn btn-danger">Submit</button> </td>
+                        </tr>
+                     </form>
+                     <form class="form-inline" name="day" action="Day.jsp" method="post">
+                        <tr>
+                           <td> <label for="year" class="mr-sm-2"> Day </label> </td>
+                           <td width="4">:</td>
+                           <td> <input type="number" name="day" id="day" placeholder="Enter Day" class="form-control mb-2 mr-sm-2"> </td>
+                           <td> <button type="submit" onclick="dayTest()" class="btn btn-success">Submit</button></td>
+                        </tr>
+                  </table>
+               </td>
+               </form>
+            </tr>
+         </table>
+      </div>
+   </body>
+</html>
